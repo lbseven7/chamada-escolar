@@ -2,7 +2,7 @@ function App() {
   return (
     <div>
       <h1>
-        arlisson
+        Arlisson
       </h1>
     </div>
   );

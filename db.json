@@ -1,0 +1,37 @@
+{
+  "professors": [
+    {
+      "id": 3,
+      "nome": "eunice da silva sauron",
+      "email": "eunice@gmail.com",
+      "senha": "ferewrew",
+      "materia": ""
+    }
+  ],
+  "alunos": [
+    {
+      "id": 31,
+      "professor_id": 3,
+      "nome": "pedro pedigru"
+    }
+  ],
+  "historicos": [
+    {
+      "id": 256,
+      "professor_id": 3,
+      "data": "2023-05-27T12:00:00.000Z",
+      "chamada": [
+        {
+          "aluno_id": 31,
+          "presenca": false,
+          "justificado": false
+        },
+        {
+          "aluno_id": 31,
+          "presenca": true,
+          "justificado": true
+        }
+      ]
+    }
+  ]
+}

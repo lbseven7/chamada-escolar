@@ -1,9 +1,14 @@
+import Loading from './components/Loading';
+// import Chamada from './components/Chamada';
+import Login from './pages/Login';
+// import Table from './components/Table';
+
 function App() {
   return (
     <div>
-      <h1>
-        Arlisson
-      </h1>
+      {/* <Chamada /> */}
+      <Loading />
+      <Login />
     </div>
   );
 }

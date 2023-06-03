@@ -7,26 +7,28 @@ function Input({
   return (
     <label
       htmlFor="input"
-      className="flex bg-primary-bg rounded-full w-fit"
+      className="flex bg-primary-bg rounded-full w-fit justify-evenly"
       style={{ width, height, minWidth: width }}
     >
-      <div className="w-[15%] flex justify-center items-center">
-        <img src={img1} alt="img" className="w-6" />
-      </div>
+      {img1 && (
+        <div className="w-[10%] flex justify-center items-center ml-2">
+          <img src={img1} alt="img" className="w-6" />
+        </div>
+      )}
       <input
         type={type}
         id="input"
         placeholder={placeholder}
-        className="bg-primary-bg w-[65%] outline-none text-sm"
+        className="bg-primary-bg w-[100%] outline-none text-sm rounded-full p-3"
       />
       {img2
       && (
         <button
           type="button"
           onClick={onclick}
-          className="w-[15%] flex justify-center items-center cursor-pointer"
+          className="w-[18%] flex justify-center items-center cursor-pointer mr-3"
         >
-          <img src={img2} alt="img" className="rounded-full w-10" />
+          <img src={img2} alt="img" className="rounded-full w-full" />
         </button>
       )}
     </label>

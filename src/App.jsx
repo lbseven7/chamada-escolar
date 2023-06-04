@@ -1,9 +1,9 @@
+import Loading from './components/Loading';
+
 function App() {
   return (
     <div>
-      <h1>
-        Arlisson
-      </h1>
+      <Loading />
     </div>
   );
 }

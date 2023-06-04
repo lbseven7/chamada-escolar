@@ -13,7 +13,7 @@ export default {
       'font-color': '#FFFFFF',
       'prymary-title': '#737373',
       'secundary-title': '#878B8B',
-      error: '#D62828',
+      error: '#fb5607',
     },
   },
   plugins: [],

@@ -42,14 +42,14 @@ function SignUp() {
       </div>
 
       <div className="w-[80%] h-[450px] space-y-6 flex flex-col justify-between md:items-center md:w-[50%]">
-        <h1 className="text-3xl font-bold text-secundary-bg pl-2 md:w-[70%] md:m-auto lg:w-[40%]">Sign Up</h1>
+        <h1 className="text-3xl font-bold text-secundary-bg pl-2 md:w-[70%] md:m-auto lg:w-[40%]">Cadastro</h1>
 
         <form
           onSubmit={handleSubmit(formHandler)}
           className="text-center h-[90%] flex flex-col justify-around md:w-[70%] lg:w-[40%]"
         >
           <Input
-            placeholder="Nome do usuario"
+            placeholder="Nome"
             type="text"
             width="100%"
             height="40px"
@@ -79,7 +79,7 @@ function SignUp() {
           />
           {errors?.email && <span className="text-error text-sm leading-3">{errors?.email?.message}</span>}
           <Input
-            placeholder="Password"
+            placeholder="Senha"
             type={type}
             width="100%"
             image={lock}
@@ -94,7 +94,7 @@ function SignUp() {
           />
           {errors?.senha && <span className="text-error text-sm leading-3">{errors?.senha?.message}</span>}
           <Input
-            placeholder="Confirme passord"
+            placeholder="Confirmar senha"
             type={type}
             width="100%"
             image={lock}
@@ -108,11 +108,11 @@ function SignUp() {
           />
           {errors?.confirmarSenha && <span className="text-error text-sm leading-3">{errors?.confirmarSenha?.message}</span>}
           <Button
-            classname="border w-full h-[50px] bg-btn-color text-font-color text-2xl font-bold rounded-full"
+            classname="w-full h-[50px] bg-btn-color text-font-color text-2xl font-bold rounded-full     "
           >
-            <h2>Sign Up</h2>
+            <h2>Cadastrar</h2>
           </Button>
-          <a href="https://www.google.com.br/" className="text-secundary-bg font-bold text-sm">Already Have Account? Sign In</a>
+          <a href="https://www.google.com.br/" className="text-secundary-bg font-bold text-sm">Já tem conta? Entrar</a>
         </form>
 
       </div>

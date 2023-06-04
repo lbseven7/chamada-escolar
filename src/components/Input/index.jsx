@@ -27,6 +27,7 @@ const Input = forwardRef(
         placeholder={placeholder}
         ref={forwardedRef}
         {...register}
+        autoComplete="off"
         className="bg-primary-bg w-[100%] outline-none text-sm rounded-full p-3"
       />
       {conditionalImage && (

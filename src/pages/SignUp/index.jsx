@@ -1,9 +1,9 @@
 import { useForm } from 'react-hook-form';
 import {
-  lock, eye, eyeClosed, user,
+  lock, eye, eyeClosed, user, email,
 } from '../../images/icons';
 
-import logo from '../../images/logo/logo01.png';
+import logo from '../../images/logo/logo_redonda.png';
 import usePasswordInputToggle from '../../Hooks/usePasswordInputToggle';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
@@ -37,8 +37,8 @@ function SignUp() {
 
   return (
     <article className="flex flex-col items-center space-y-8 w-screen max-w-full h-auto mb-10 md:flex-row md:h-screen md:mb-0">
-      <div className="h-52 w-full flex justify-center bg-secundary-bg rounded-bl-[80px] rounded-br-[80px] md:rounded-none md:h-full md:w-[50%] md:items-center">
-        <img src={logo} alt="logo" className="h-[98%] w-52 md:h-[450px] md:w-[450px]" />
+      <div className="h-52 w-full flex justify-center bg-secundary-bg rounded-bl-[80px] rounded-br-[80px] md:rounded-none md:h-full md:w-[50%] items-center">
+        <img src={logo} alt="logo" className="h-40 w-40 md:h-[350px] md:w-[350px]" />
       </div>
 
       <div className="w-[80%] h-[450px] space-y-6 flex flex-col justify-between md:items-center md:w-[50%]">
@@ -66,7 +66,7 @@ function SignUp() {
           <Input
             placeholder="Email"
             type="text"
-            image={user}
+            image={email}
             width="100%"
             height="40px"
             register={register('email', {

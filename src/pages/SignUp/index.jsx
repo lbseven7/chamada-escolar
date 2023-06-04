@@ -36,24 +36,24 @@ function SignUp() {
   };
 
   return (
-    <article className="flex flex-col items-center space-y-8 w-screen max-w-full h-auto mb-10">
-      <div className="h-52 w-full flex justify-center bg-secundary-bg rounded-bl-[80px] rounded-br-[80px]">
-        <img src={logo} alt="logo" className="h-[98%] w-52" />
+    <article className="flex flex-col items-center space-y-8 w-screen max-w-full h-auto mb-10 md:flex-row md:h-screen md:mb-0">
+      <div className="h-52 w-full flex justify-center bg-secundary-bg rounded-bl-[80px] rounded-br-[80px] md:rounded-none md:h-full md:w-[50%] md:items-center">
+        <img src={logo} alt="logo" className="h-[98%] w-52 md:h-[450px] md:w-[450px]" />
       </div>
 
-      <div className="w-[80%] h-[450px] space-y-6 flex flex-col justify-between">
-        <h1 className="text-3xl font-bold text-secundary-bg pl-2">Sign Up</h1>
+      <div className="w-[80%] h-[450px] space-y-6 flex flex-col justify-between md:items-center md:w-[50%]">
+        <h1 className="text-3xl font-bold text-secundary-bg pl-2 md:w-[70%] md:m-auto lg:w-[40%]">Sign Up</h1>
 
         <form
           onSubmit={handleSubmit(formHandler)}
-          className="text-center h-[90%] flex flex-col justify-around"
+          className="text-center h-[90%] flex flex-col justify-around md:w-[70%] lg:w-[40%]"
         >
           <Input
             placeholder="Nome do usuario"
             type="text"
             width="100%"
-            image={user}
             height="40px"
+            image={user}
             register={
               register('nome', {
                 required: 'O campo nome é obrigatorio',

@@ -108,7 +108,7 @@ function SignUp() {
           />
           {errors?.confirmarSenha && <span className="text-error text-sm leading-3">{errors?.confirmarSenha?.message}</span>}
           <Button
-            classname="w-full h-[50px] bg-btn-color text-font-color text-2xl font-bold rounded-full     "
+            classname="w-full h-[50px] bg-btn-color text-font-color text-2xl font-bold rounded-full"
           >
             <h2>Cadastrar</h2>
           </Button>

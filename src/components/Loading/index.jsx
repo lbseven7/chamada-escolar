@@ -4,7 +4,7 @@ function Loading() {
   return (
     <main
       className="
-      w-screen
+      w-full
       h-screen
       bg-secundary-bg
       flex

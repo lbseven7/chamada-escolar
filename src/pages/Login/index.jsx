@@ -80,17 +80,27 @@ function Login() {
             conditionalImage={imageState ? eye : eyeClosed}
           />
 
-          <div>
+          <div className="
+            flex
+            justify-around
+            items-center
+            "
+          >
             <label
               htmlFor="checkbox"
               className="
-              text-sm
               text-secundary-bg
               font-bold
               "
             >
+              <input
+                type="checkbox"
+                id="checkbox"
+                className="
+                  mr-2
+                "
+              />
               Lembrar Senha
-              <input type="checkbox" id="checkbox" />
             </label>
 
             <a
@@ -127,6 +137,7 @@ function Login() {
             text-sm
             text-secundary-bg
             font-bold
+            text-center
           "
           >
             Não tem uma conta? | Criar

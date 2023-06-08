@@ -1,13 +1,29 @@
-import logo from '../../images/logo/logo_redonda.png';
-import Input from '../../components/Input';
+import { useForm } from 'react-hook-form';
 import {
   email, lock, eye, eyeClosed,
 } from '../../images/icons';
+import logo from '../../images/logo/logo_redonda.png';
+import Input from '../../components/Input';
 import usePasswordInputToggle from '../../Hooks/usePasswordInputToggle';
 import Button from '../../components/Button';
 
 function Login() {
   const { type, imageState, inputTypeHandler } = usePasswordInputToggle();
+  const {
+    register, reset, handleSubmit, formState: { errors },
+  } = useForm({
+    mode: 'onSubmit',
+    defaultValues: {
+      email: '',
+      senha: '',
+      checkbox: false,
+    },
+  });
+
+  const formHandler = (data) => {
+    console.log('Form data:', data);
+    reset();
+  };
   return (
     <article className="
       flex
@@ -54,13 +70,15 @@ function Login() {
           Login
 
         </h1>
-        <form className="
-        h-[90%]
-        space-y-4
-        flex
-        flex-col
-        justify-around
-        "
+        <form
+          className="
+          h-[90%]
+          space-y-4
+          flex
+          flex-col
+          justify-around
+          "
+          onSubmit={handleSubmit(formHandler)}
         >
           <Input
             placeholder="Digite seu Email"
@@ -68,7 +86,15 @@ function Login() {
             width="100%"
             height="40px"
             image={email}
+            register={register('email', {
+              required: 'O campo Email é obrigatorio',
+              pattern: {
+                value: /^[\w-.]+@([\w-]+\.)+(com|br)$/gi,
+                message: 'E-mail inválido',
+              },
+            })}
           />
+          {errors?.email && <span className="text-error text-sm leading-3">{errors?.email?.message}</span>}
 
           <Input
             placeholder="Digite sua Senha"
@@ -78,7 +104,12 @@ function Login() {
             image={lock}
             onclick={inputTypeHandler}
             conditionalImage={imageState ? eye : eyeClosed}
+            register={register('senha', {
+              required: 'O campo Password é obrigatorio',
+              validate: (value) => (value.includes(' ')) ? 'A senha não pode conter espaços vazia.' : true,
+            })}
           />
+          {errors?.senha && <span className="text-error text-sm leading-3">{errors?.senha?.message}</span>}
 
           <div className="
             flex
@@ -99,10 +130,10 @@ function Login() {
                 className="
                   mr-2
                 "
+                {...register('checkbox')}
               />
               Lembrar Senha
             </label>
-
             <a
               href="www.reflorbrasil.com.br"
               className="

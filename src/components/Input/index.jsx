@@ -9,7 +9,7 @@ const Input = forwardRef(
     {
       placeholder, type, width, height, image, conditionalImage, onclick, register,
     },
-    forwardedRef,
+    ref,
   ) => (
     <label
       htmlFor={placeholder}
@@ -25,7 +25,7 @@ const Input = forwardRef(
         type={type}
         id={placeholder}
         placeholder={placeholder}
-        ref={forwardedRef}
+        ref={ref}
         {...register}
         autoComplete="off"
         className="bg-primary-bg w-[100%] outline-none text-sm rounded-full p-3"
@@ -49,4 +49,4 @@ const Input = forwardRef(
 
 const MemoizedInput = memo(Input);
 
-export default forwardRef((props, ref) => <MemoizedInput {...props} forwardedRef={ref} />);
+export default forwardRef((props, ref) => <MemoizedInput {...props} ref={ref} />);

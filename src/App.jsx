@@ -1,16 +1,8 @@
-// import Loading from './components/Loading';
-// import SignUp from './pages/SignUp'
-// import Login from './pages/Login';
-import ResetPassword from './pages/ResetPassword';
+import Routes from './routes/routes';
 
 function App() {
   return (
-    <div>
-      {/* <Loading /> */}
-      {/* <SignUp /> */}
-      {/* <Login /> */}
-      <ResetPassword />
-    </div>
+    <Routes />
   );
 }
 

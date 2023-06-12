@@ -19,17 +19,17 @@ function ForgotPassword() {
     reset();
   };
   return (
-    <article className="flex flex-col items-center space-y-11 w-screen max-w-full h-auto mb-10 md:flex-row md:h-screen md:mb-0">
-      <div className="h-52 w-full flex justify-center bg-secundary-bg rounded-bl-[80px] rounded-br-[80px] md:rounded-none md:h-full md:w-[50%] items-center">
-        <img src={logo} alt="logo" className="h-40 w-40 md:h-[350px] md:w-[350px]" />
+    <article className="flex flex-col items-center space-y-11 w-screen max-w-full h-auto mb-10 md:flex-row md:h-screen md:mb-0 md:justify-center md:space-y-0">
+      <div className="h-64 w-full flex justify-center bg-secundary-bg rounded-bl-[70px] rounded-br-[70px] md:rounded-none md:h-full md:w-[50%] items-center space-y-11">
+        <img src={logo} alt="logo" className="w-48 h-48 md:h-[200px] md:w-[200px]" />
       </div>
 
-      <div className="w-[80%] h-[350px] space-y-6 flex flex-col justify-center md:items-center md:w-[50%]">
-        <h1 className="text-3xl font-bold text-secundary-bg pl-2 md:w-[70%] md:m-auto lg:w-[100%] lg:text-center">Esqueceu a senha ?</h1>
+      <div className="w-[80%] h-[300px] space-y-6 flex flex-col justify-center md:items-center md:w-[50%]">
+        <h1 className="text-3xl font-bold text-secundary-bg pl-2 md:w-auto md:text-center lg:mr-[60px]">Esqueceu a senha ?</h1>
 
         <form
           onSubmit={handleSubmit(formHandler)}
-          className="text-center h-[60%] flex flex-col justify-around md:w-[70%]"
+          className="text-center h-[60%] flex flex-col justify-around md:w-[50%]"
         >
           <Input
             placeholder="Email"

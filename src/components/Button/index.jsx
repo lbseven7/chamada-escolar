@@ -1,10 +1,11 @@
 function Button({
-  children, classname,
+  children, classname, onclick, path,
 }) {
   return (
     <button
       type="submit"
       className={classname}
+      onClick={() => onclick(path)}
     >
       {children}
     </button>

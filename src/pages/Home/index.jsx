@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import Button from '../../components/Button';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { editar, megafone } from '../../images/icons';
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <main className="border h-auto min-h-screen md:h-screen w-full bg-primary-bg flex flex-col items-center justify-between">
       <Header />
@@ -12,8 +14,10 @@ function Home() {
           <img src={megafone} alt="imagem" className="h-32" />
           <Button
             classname="w-[75%] border bg-btn-color rounded-full h-[40px] text-font-color"
+            onclick={navigate}
+            path="/call"
           >
-            Fazer Chamada
+            Nova Chamada
           </Button>
         </div>
 
@@ -21,8 +25,10 @@ function Home() {
           <img src={editar} alt="imagem" className="h-32" />
           <Button
             classname="w-[75%] border bg-btn-color rounded-full h-[40px] text-font-color"
+            onclick={navigate}
+            path="/edit"
           >
-            Fazer Chamada
+            Editar Chamada
           </Button>
         </div>
       </section>

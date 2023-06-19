@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { useNavigate, Link } from 'react-router-dom';
 import {
   lock, eye, eyeClosed, user, email,
 } from '../../images/icons';
@@ -23,6 +24,8 @@ function SignUp() {
     },
   });
 
+  const navigate = useNavigate();
+
   const formHandler = (data) => {
     console.log('Form data:', data);
     reset();
@@ -38,7 +41,7 @@ function SignUp() {
   return (
     <article className="flex flex-col items-center space-y-8 w-screen max-w-full h-auto mb-10 md:flex-row md:h-screen md:mb-0">
       <div className="h-52 w-full flex justify-center bg-secundary-bg rounded-bl-[80px] rounded-br-[80px] md:rounded-none md:h-full md:w-[50%] items-center">
-        <img src={logo} alt="logo" className="h-40 w-40 md:h-[350px] md:w-[350px]" />
+        <img src={logo} alt="logo" className="w-48 h-48 md:h-[200px] md:w-[200px]" />
       </div>
 
       <div className="w-[80%] h-[450px] space-y-6 flex flex-col justify-between md:items-center md:w-[50%]">
@@ -109,10 +112,16 @@ function SignUp() {
           {errors?.confirmarSenha && <span className="text-error text-sm leading-3">{errors?.confirmarSenha?.message}</span>}
           <Button
             classname="w-full h-[50px] bg-btn-color text-font-color text-2xl font-bold rounded-full"
+            onclick={navigate}
+            path="/"
           >
             <h2>Cadastrar</h2>
           </Button>
-          <a href="https://www.google.com.br/" className="text-secundary-bg font-bold text-sm">Já tem conta? Entrar</a>
+          <span className="text-secundary-bg font-bold text-sm">
+            Já tem conta? |
+            {' '}
+            <Link to="/">Entrar</Link>
+          </span>
         </form>
 
       </div>

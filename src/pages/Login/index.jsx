@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { useNavigate, Link } from 'react-router-dom';
 import {
   email, lock, eye, eyeClosed,
 } from '../../images/icons';
@@ -19,6 +20,7 @@ function Login() {
       checkbox: false,
     },
   });
+  const navigate = useNavigate();
 
   const formHandler = (data) => {
     console.log('Form data:', data);
@@ -30,7 +32,7 @@ function Login() {
       flex-col
       items-center
       w-full
-      h-auto
+      h-screen
       space-y-4
     "
     >
@@ -133,8 +135,8 @@ function Login() {
               />
               Lembrar Senha
             </label>
-            <a
-              href="www.reflorbrasil.com.br"
+            <Link
+              to="/forgotPassword"
               className="
                text-sm
                text-secundary-bg
@@ -142,7 +144,7 @@ function Login() {
             "
             >
               Esqueceu a Senha?
-            </a>
+            </Link>
           </div>
 
           <Button
@@ -155,12 +157,14 @@ function Login() {
             text-xl
             font-bold
             "
+            onclick={navigate}
+            path="/home"
           >
             <span>
               Entrar
             </span>
           </Button>
-          <a
+          <span
             href="www.reflorbrasil.com.br"
             className="
             text-sm
@@ -169,8 +173,10 @@ function Login() {
             text-center
           "
           >
-            Não tem uma conta? | Criar
-          </a>
+            Não tem uma conta? |
+            {' '}
+            <Link to="/signUp">Criar</Link>
+          </span>
         </form>
       </div>
     </article>

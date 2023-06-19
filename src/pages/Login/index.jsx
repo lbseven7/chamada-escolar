@@ -29,7 +29,7 @@ function Login() {
       flex
       flex-col
       items-center
-      w-screen
+      w-full
       h-auto
       space-y-4
     "
@@ -68,7 +68,6 @@ function Login() {
         "
         >
           Login
-
         </h1>
         <form
           className="
@@ -143,7 +142,6 @@ function Login() {
             "
             >
               Esqueceu a Senha?
-
             </a>
           </div>
 
@@ -172,7 +170,6 @@ function Login() {
           "
           >
             Não tem uma conta? | Criar
-
           </a>
         </form>
       </div>

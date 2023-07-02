@@ -47,7 +47,17 @@ function ResetPassword() {
           alt="logo"
         />
       </div>
-      <div className="flex text-start flex-col w-[80%] h-[380px] space-y-6 md:items-center md:w-[50%]">
+      <div className="
+      flex
+      text-start
+      flex-col
+      w-[80%]
+      h-[380px]
+      space-y-6
+      md:items-center
+      md:w-[50%]
+      "
+      >
         <h1 className="
           font-bold
           text-3xl

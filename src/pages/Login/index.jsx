@@ -7,6 +7,20 @@ import logo from '../../images/logo/logo_redonda.png';
 import Input from '../../components/Input';
 import usePasswordInputToggle from '../../Hooks/usePasswordInputToggle';
 import Button from '../../components/Button';
+import {
+  container,
+  containerImage,
+  image,
+  containerForm,
+  titleStyle,
+  formStyle,
+  errorStyle,
+  wrapperInputLink,
+  labelStyle,
+  buttonStyle,
+  linkStyle,
+  spanStyle,
+} from './style';
 
 function Login() {
   const { type, imageState, inputTypeHandler } = usePasswordInputToggle();
@@ -27,74 +41,20 @@ function Login() {
     reset();
   };
   return (
-    <article className="
-      flex
-      flex-col
-      items-center
-      w-full
-      h-screen
-      space-y-4
-      md:flex-row
-      md:h-screen
-      md:space-y-0
-    "
-    >
-      <div className="
-        bg-secundary-bg
-        w-full
-        h-64
-        flex
-        justify-center
-        items-center
-        rounded-bl-[70px]
-        rounded-br-[70px]
-        md:rounded-none
-        md:h-full
-        md:w-[50%]
-      "
-      >
+    <article className={container}>
+      <div className={containerImage}>
         <img
-          className="
-          w-48
-          h-48
-          md:h-[200px]
-          md:w-[200px]
-          "
+          className={image}
           src={logo}
           alt="logo"
         />
       </div>
-      <div className="
-        flex
-        text-start
-        flex-col
-        w-[80%]
-        h-[350px]
-        space-y-4
-        md:items-center
-        md:w-[50%]
-      "
-      >
-        <h1 className="
-          font-bold
-          text-2xl
-          text-btn-color
-          mt-6
-          md:w-auto
-          md:mr-[140px]
-        "
-        >
+      <div className={containerForm}>
+        <h1 className={titleStyle}>
           Login
         </h1>
         <form
-          className="
-          h-[90%]
-          space-y-4
-          flex
-          flex-col
-          justify-around
-          items-center
-          "
+          className={formStyle}
           onSubmit={handleSubmit(formHandler)}
         >
           <Input
@@ -111,7 +71,7 @@ function Login() {
               },
             })}
           />
-          {errors?.email && <span className="text-error text-sm leading-3">{errors?.email?.message}</span>}
+          {errors?.email && <span className={errorStyle}>{errors?.email?.message}</span>}
 
           <Input
             placeholder="Digite sua Senha"
@@ -126,53 +86,31 @@ function Login() {
               validate: (value) => (value.includes(' ')) ? 'A senha não pode conter espaços vazia.' : true,
             })}
           />
-          {errors?.senha && <span className="text-error text-sm leading-3">{errors?.senha?.message}</span>}
+          {errors?.senha && <span className={errorStyle}>{errors?.senha?.message}</span>}
 
-          <div className="
-            flex
-            justify-around
-            items-center
-            "
-          >
+          <div className={wrapperInputLink}>
             <label
               htmlFor="checkbox"
-              className="
-              text-secundary-bg
-              font-bold
-              "
+              className={labelStyle}
             >
               <input
                 type="checkbox"
                 id="checkbox"
-                className="
-                  mr-2
-                "
+                className="mr-2"
                 {...register('checkbox')}
               />
               Lembrar Senha
             </label>
             <Link
               to="/forgotPassword"
-              className="
-               text-sm
-               text-secundary-bg
-               font-bold
-            "
+              className={linkStyle}
             >
               Esqueceu a Senha?
             </Link>
           </div>
 
           <Button
-            classname="
-            bg-btn-color
-            text-font-color
-            w-full
-            h-[50px]
-            rounded-full
-            text-xl
-            font-bold
-            "
+            classname={buttonStyle}
             onclick={navigate}
             path="/home"
           >
@@ -182,12 +120,7 @@ function Login() {
           </Button>
           <span
             href="www.reflorbrasil.com.br"
-            className="
-            text-sm
-            text-secundary-bg
-            font-bold
-            text-center
-          "
+            className={spanStyle}
           >
             Não tem uma conta? |
             {' '}

@@ -34,6 +34,9 @@ function Login() {
       w-full
       h-screen
       space-y-4
+      md:flex-row
+      md:h-screen
+      md:space-y-0
     "
     >
       <div className="
@@ -43,12 +46,19 @@ function Login() {
         flex
         justify-center
         items-center
+        rounded-bl-[70px]
+        rounded-br-[70px]
+        md:rounded-none
+        md:h-full
+        md:w-[50%]
       "
       >
         <img
           className="
           w-48
           h-48
+          md:h-[200px]
+          md:w-[200px]
           "
           src={logo}
           alt="logo"
@@ -61,12 +71,17 @@ function Login() {
         w-[80%]
         h-[350px]
         space-y-4
+        md:items-center
+        md:w-[50%]
       "
       >
         <h1 className="
           font-bold
           text-2xl
           text-btn-color
+          mt-6
+          md:w-auto
+          md:mr-[140px]
         "
         >
           Login
@@ -78,6 +93,7 @@ function Login() {
           flex
           flex-col
           justify-around
+          items-center
           "
           onSubmit={handleSubmit(formHandler)}
         >

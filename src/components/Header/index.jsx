@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo/logo_redonda.png';
 import { user } from '../../images/icons';
 import Button from '../Button';
@@ -9,9 +10,11 @@ function Header() {
       <h2 className="">
         Sistema de Chamadas
       </h2>
-      <Button classname="rounded-full ring-2 ring-secundary-bg h-10 w-10 flex justify-center items-center">
-        <img src={user} alt="logo" className="h-8 w-8 rounded-full" />
-      </Button>
+      <Link to="/editPerfil">
+        <Button classname="rounded-full ring-2 ring-secundary-bg h-10 w-10 flex justify-center items-center">
+          <img src={user} alt="logo" className="h-8 w-8 rounded-full" />
+        </Button>
+      </Link>
     </header>
   );
 }

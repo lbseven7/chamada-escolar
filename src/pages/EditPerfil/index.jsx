@@ -5,7 +5,7 @@ function EditPerfil() {
     <div className="flex justify-center mt-72">
       <h1>AQUI EDITAR PERFIL DO USUÁRIO</h1>
       <Link to="/home">
-        <button className="bg-btn-color p-5" type="submit">
+        <button className="bg-btn-color p-5 mt-36 mr-24" type="submit">
           voltar para home
         </button>
       </Link>

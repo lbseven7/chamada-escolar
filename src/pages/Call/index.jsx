@@ -6,7 +6,7 @@ function Call() {
       <h1>AQUI FAZER CHAMADA</h1>
       <div>
         <Link to="/home">
-          <button className="bg-btn-color p-5" type="submit">
+          <button className="bg-btn-color p-5 mt-36" type="submit">
             voltar para home
           </button>
         </Link>

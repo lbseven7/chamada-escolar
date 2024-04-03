@@ -7,6 +7,7 @@ import ResetPassword from '../pages/ResetPassword';
 import Call from '../pages/Call';
 import Edit from '../pages/EditCall';
 import EditPerfil from '../pages/EditPerfil';
+import Loading from '../components/Loading';
 
 export default function Router() {
   return (
@@ -20,6 +21,7 @@ export default function Router() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/resetPassword" element={<ResetPassword />} />
+        <Route path="/loading" element={<Loading />} />
       </Routes>
     </BrowserRouter>
   );

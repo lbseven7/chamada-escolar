@@ -6,7 +6,9 @@ import Button from '../Button';
 function Header() {
   return (
     <header className="h-[90px] flex w-full justify-between items-center font-bold bg-font-color text-secundary-title px-6 text-center text-lg sm:text-2xl md:text-3xl">
-      <img src={logo} alt="logo" className="h-10" />
+      <Link to="/">
+        <img src={logo} alt="logo" className="h-10" />
+      </Link>
       <h2 className="">
         Sistema de Chamadas
       </h2>

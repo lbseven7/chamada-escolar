@@ -2,18 +2,13 @@ import logo from '../../images/logo/logo_redonda.png';
 
 function Loading() {
   return (
-    <main
+    <div
       className="
-      w-full
-      h-screen
-      bg-secundary-bg
-      flex
-      justify-center
-      items-center
+      fixed inset-0 z-50 flex items-center justify-center bg-secundary-bg h-screen
       "
     >
-      <img className="animate-bounce" src={logo} alt="logo" />
-    </main>
+      <img className="animate-bounce sm:w-24 md:w-36 xl:w-72" src={logo} alt="logo" />
+    </div>
   );
 }
 

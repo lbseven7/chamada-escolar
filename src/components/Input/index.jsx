@@ -1,19 +1,19 @@
-// // Os dados do tipo width, height dever ser do no formato string ex: width="250px".
-// // Os dados do tipo conditionalImage deve estar no formato ternário
-// // ex: conditionalImage={imageState ? image1 : image2}.
-
 import React, { forwardRef, memo } from 'react';
 
 const Input = forwardRef(
   (
     {
-      placeholder, type, width, height, image, conditionalImage, onclick, register,
+      placeholder,
+      type,
+      width,
+      height,
+      image, conditionalImage, onClick, register, // Corrigido de 'onclick' para 'onClick'
     },
     ref,
   ) => (
     <label
       htmlFor={placeholder}
-      className="flex bg-primary-bg rounded-full w-fit justify-start"
+      className="flex bg-primary-bg rounded w-fit justify-start"
       style={{ width, height, minWidth: width }}
     >
       {image && (
@@ -31,17 +31,17 @@ const Input = forwardRef(
         className="bg-primary-bg w-[100%] outline-none text-sm rounded-full p-3"
       />
       {conditionalImage && (
-      <button
-        type="button"
-        onClick={onclick}
-        className="w-14 flex justify-center items-center cursor-pointer mr-2"
-      >
-        <img
-          src={conditionalImage}
-          alt="img"
-          className="rounded-full w-full"
-        />
-      </button>
+        <button
+          type="button"
+          onClick={onClick} // Corrigido de 'onclick' para 'onClick'
+          className="w-14 flex justify-center items-center cursor-pointer mr-2"
+        >
+          <img
+            src={conditionalImage}
+            alt="img"
+            className="w-full"
+          />
+        </button>
       )}
     </label>
   ),

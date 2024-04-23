@@ -17,7 +17,8 @@
     "react-hook-form": "^7.44.3",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.11.2",
-    "vite": "^4.3.9"
+    "vite": "^4.3.9",
+    "websocket": "^1.0.34"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",

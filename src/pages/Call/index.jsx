@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* json-server --watch db.json --port 3000 */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
@@ -53,8 +54,8 @@ function Call() {
     <>
       <Header />
       <div className="flex flex-col items-center justify-center bg-secundary-bg">
-        <h1 className="text-2xl font-bold mb-4">Lista de Alunos</h1>
-        <table className="border-collapse border border-bordas- bg-font-color">
+        {/* <h1 className="text-2xl font-bold mb-4">Lista de Alunos</h1> */}
+        <table className="border-collapse border border-bordas- bg-font-color mt-24 mb-24 w-1/3">
           <thead className="border-bordas-">
             <tr>
               <th className="border border-bordas- px-4 py-4">ID</th>

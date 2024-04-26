@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
-import buttonStyle from '../Login/style';
 
 function Call() {
   const [alunos, setAlunos] = useState([]);
@@ -113,7 +112,7 @@ function Call() {
           <Link to="/report">
             <button
               type="button"
-              className={buttonStyle}
+              className=""
             >
               FINALIZAR CHAMADA
             </button>

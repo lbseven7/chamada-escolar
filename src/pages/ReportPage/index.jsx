@@ -62,14 +62,17 @@ function Report() {
           </tbody>
         </table>
 
-        <Link to="/call">
-          <button
-            type="button"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded mt-4 mb-24"
-          >
-            Voltar para Home
-          </button>
-        </Link>
+        <div className="flex flex-wrap gap-6">
+
+          <Link to="/call">
+            <button
+              type="button"
+              className="w-[100%] border bg-btn-color rounded h-[40px] text-font-color py-2 mb-24 p-3"
+            >
+              VOLTAR PARA HOME
+            </button>
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -1,8 +1,9 @@
+/* eslint-disable no-shadow */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-/* json-server --watch db.json --port 3000 */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
+import buttonStyle from '../Login/style';
 
 function Call() {
   const [alunos, setAlunos] = useState([]);
@@ -23,16 +24,26 @@ function Call() {
       .catch((error) => console.error('Erro ao recuperar os dados dos alunos:', error));
   }, []);
 
+  useEffect(() => {
+    // Salvando os dados da chamada no localStorage sempre que houver alteração
+    localStorage.setItem('callData', JSON.stringify(alunos));
+  }, [alunos]);
+
   const handleChange = (alunoId, opcao) => {
-    setAlunos(alunos.map((aluno) => {
+    setAlunos((alunos) => alunos.map((aluno) => {
       if (aluno.id === alunoId) {
+        const updatedOpcoesChamada = {
+          presente: false,
+          ausente: false,
+          justificado: false,
+        };
+
+        // Define a opção selecionada como verdadeira
+        updatedOpcoesChamada[opcao] = true;
+
         return {
           ...aluno,
-          opcoesChamada: {
-            presente: opcao === 'presente' ? !aluno.opcoesChamada.presente : false,
-            ausente: opcao === 'ausente' ? !aluno.opcoesChamada.ausente : false,
-            justificado: opcao === 'justificado' ? !aluno.opcoesChamada.justificado : false,
-          },
+          opcoesChamada: updatedOpcoesChamada,
         };
       }
       return aluno;
@@ -54,7 +65,6 @@ function Call() {
     <>
       <Header />
       <div className="flex flex-col items-center justify-center bg-secundary-bg">
-        {/* <h1 className="text-2xl font-bold mb-4">Lista de Alunos</h1> */}
         <table className="border-collapse border border-bordas- bg-font-color mt-24 mb-24 w-1/3">
           <thead className="border-bordas-">
             <tr>
@@ -68,7 +78,7 @@ function Call() {
               <tr key={aluno.id}>
                 <td className={`px-4 py-2 ${getClassName(aluno.opcoesChamada)}`}>{aluno.id}</td>
                 <td className={` px-8 py-2 ${getClassName(aluno.opcoesChamada)}`}>{aluno.nome}</td>
-                <td className="border-bordas- px-4 py-2 ${">
+                <td className="border-bordas- px-4 py-2">
                   <input
                     type="checkbox"
                     id={`presente-${aluno.id}`}
@@ -98,6 +108,17 @@ function Call() {
             ))}
           </tbody>
         </table>
+        <div>
+
+          <Link to="/report">
+            <button
+              type="button"
+              className={buttonStyle}
+            >
+              FINALIZAR CHAMADA
+            </button>
+          </Link>
+        </div>
       </div>
       <Link to="/home">
         <button

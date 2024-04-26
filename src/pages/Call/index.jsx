@@ -108,25 +108,29 @@ function Call() {
           </tbody>
         </table>
         <div>
+          <div className="flex flex-wrap gap-6">
 
-          <Link to="/report">
-            <button
-              type="button"
-              className=""
-            >
-              FINALIZAR CHAMADA
-            </button>
-          </Link>
+            <Link to="/report">
+              <button
+                type="button"
+                className="w-[100%] border bg-btn-color rounded h-[40px] text-font-color py-2 mb-24 p-3"
+              >
+                FINALIZAR CHAMADA
+              </button>
+            </Link>
+
+            <Link to="/home">
+              <button
+                type="button"
+                className="w-[100%] border bg-btn-color rounded h-[40px] text-font-color py-2 mb-24 p-3"
+              >
+                VOLTAR PARA HOME
+              </button>
+            </Link>
+          </div>
+
         </div>
       </div>
-      <Link to="/home">
-        <button
-          type="button"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-        >
-          Voltar para Home
-        </button>
-      </Link>
     </>
   );
 }

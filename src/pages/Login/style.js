@@ -93,3 +93,18 @@ export const spanStyle = `
   font-bold
   text-center
 `;
+
+export default {
+  container,
+  containerImage,
+  image,
+  containerForm,
+  titleStyle,
+  formStyle,
+  errorStyle,
+  wrapperInputLink,
+  labelStyle,
+  linkStyle,
+  buttonStyle,
+  spanStyle,
+};

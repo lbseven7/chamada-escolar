@@ -23,10 +23,7 @@ function Call() {
       .catch((error) => console.error('Erro ao recuperar os dados dos alunos:', error));
   }, []);
 
-  useEffect(() => {
-    // Salvando os dados da chamada no localStorage sempre que houver alteração
-    localStorage.setItem('callData', JSON.stringify(alunos));
-  }, [alunos]);
+  useEffect(() => {}, [alunos]);
 
   const handleChange = (alunoId, opcao) => {
     setAlunos((alunos) => alunos.map((aluno) => {
@@ -43,6 +40,7 @@ function Call() {
         return {
           ...aluno,
           opcoesChamada: updatedOpcoesChamada,
+          date: new Date(),
         };
       }
       return aluno;
@@ -58,6 +56,21 @@ function Call() {
       return 'text-justificado- text-xl'; // Cinza para justificado
     }
     return ''; // Nenhuma opção selecionada
+  };
+
+  const finalizasChamada = () => {
+    fetch('http://localhost:3000/chamada', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(alunos),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Chamada finalizada com sucesso:', data);
+      })
+      .catch((error) => console.error('Erro ao finalizar a chamada:', error));
   };
 
   return (
@@ -112,6 +125,7 @@ function Call() {
 
             <Link to="/report">
               <button
+                onClick={() => finalizasChamada()}
                 type="button"
                 className="w-[100%] border bg-btn-color rounded h-[40px] text-font-color py-2 mb-24 p-3"
               >

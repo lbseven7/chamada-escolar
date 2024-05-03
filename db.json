@@ -42,6 +42,100 @@
     }
   ],
   "chamada": [
-
+    {
+      "0": {
+        "id": "1",
+        "nome": "André Oliveira",
+        "opcoesChamada": {
+          "presente": true,
+          "ausente": false,
+          "justificado": false
+        },
+        "date": "2024-05-03T00:00:38.580Z"
+      },
+      "1": {
+        "id": "2",
+        "nome": "Bruno Silva",
+        "opcoesChamada": {
+          "presente": true,
+          "ausente": false,
+          "justificado": false
+        },
+        "date": "2024-05-03T00:00:39.227Z"
+      },
+      "2": {
+        "id": "3",
+        "nome": "Carlos Pereira",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "3": {
+        "id": "4",
+        "nome": "Carolina Lima",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "4": {
+        "id": "5",
+        "nome": "Felipe Costa",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "5": {
+        "id": "6",
+        "nome": "Fernanda Lima",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "6": {
+        "id": "7",
+        "nome": "Gabriel Costa",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "7": {
+        "id": "8",
+        "nome": "Gustavo Silva",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "8": {
+        "id": "9",
+        "nome": "Isabela Martins",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "9": {
+        "id": "10",
+        "nome": "João Oliveira",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "id": "77a2"
+    }
   ]
 }

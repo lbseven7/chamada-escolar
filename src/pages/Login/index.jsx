@@ -26,7 +26,9 @@ import {
 
 function Login() {
   const { type, imageState, inputTypeHandler } = usePasswordInputToggle();
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const {
+    reset, register, handleSubmit, formState: { errors },
+  } = useForm({
     mode: 'onSubmit',
     defaultValues: {
       email: '',
@@ -45,14 +47,10 @@ function Login() {
 
   const formRef = useRef(null);
 
-  const formHandler = async (data) => {
+  const formHandler = (data) => {
     console.log('Form data:', data);
-    // Verificar se não há erros de validação
-    if (Object.keys(errors).length === 0) {
-      navigate('/home');
-    } else {
-      console.log('Existem erros de validação:', errors);
-    }
+    navigate('/home');
+    reset();
   };
 
   if (loading) {
@@ -132,7 +130,6 @@ function Login() {
 
           <Button
             classname={buttonStyle}
-            type="submit"
           >
             <span>
               Entrar

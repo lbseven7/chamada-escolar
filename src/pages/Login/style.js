@@ -87,6 +87,18 @@ export const buttonStyle = `
   font-bold
 `;
 
+export const buttonHomeStyle = `
+  w-[75%]
+  border
+  bg-btn-color
+  rounded
+  h-[40px]
+  text-font-color
+  py-2
+  mb-24
+  p-3
+`;
+
 export const spanStyle = `
   text-sm
   text-secundary-bg

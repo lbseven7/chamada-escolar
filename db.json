@@ -39,78 +39,103 @@
     {
       "id": "10",
       "nome": "João Oliveira"
-    },
+    }
+  ],
+  "chamada": [
     {
-      "id": "11",
-      "nome": "Jéssica Ferreira"
-    },
-    {
-      "id": "12",
-      "nome": "Juliana Souza"
-    },
-    {
-      "id": "13",
-      "nome": "Laura Santos"
-    },
-    {
-      "id": "14",
-      "nome": "Letícia Santos"
-    },
-    {
-      "id": "15",
-      "nome": "Lucas Almeida"
-    },
-    {
-      "id": "16",
-      "nome": "Lucas Oliveira"
-    },
-    {
-      "id": "17",
-      "nome": "Luana Ferreira"
-    },
-    {
-      "id": "18",
-      "nome": "Mariana Rodrigues"
-    },
-    {
-      "id": "19",
-      "nome": "Maria Santos"
-    },
-    {
-      "id": "20",
-      "nome": "Matheus Cardoso"
-    },
-    {
-      "id": "21",
-      "nome": "Pedro Silva"
-    },
-    {
-      "id": "22",
-      "nome": "Rafael Pereira"
-    },
-    {
-      "id": "23",
-      "nome": "Rafaela Martins"
-    },
-    {
-      "id": "24",
-      "nome": "Ricardo Almeida"
-    },
-    {
-      "id": "25",
-      "nome": "Tatiane Lima"
-    },
-    {
-      "id": "26",
-      "nome": "Thiago Almeida"
-    },
-    {
-      "id": "27",
-      "nome": "Vanessa Souza"
-    },
-    {
-      "id": "28",
-      "nome": "Victor Pereira"
+      "0": {
+        "id": "1",
+        "nome": "André Oliveira",
+        "opcoesChamada": {
+          "presente": true,
+          "ausente": false,
+          "justificado": false
+        },
+        "date": "2024-05-03T00:00:38.580Z"
+      },
+      "1": {
+        "id": "2",
+        "nome": "Bruno Silva",
+        "opcoesChamada": {
+          "presente": true,
+          "ausente": false,
+          "justificado": false
+        },
+        "date": "2024-05-03T00:00:39.227Z"
+      },
+      "2": {
+        "id": "3",
+        "nome": "Carlos Pereira",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "3": {
+        "id": "4",
+        "nome": "Carolina Lima",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "4": {
+        "id": "5",
+        "nome": "Felipe Costa",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "5": {
+        "id": "6",
+        "nome": "Fernanda Lima",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "6": {
+        "id": "7",
+        "nome": "Gabriel Costa",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "7": {
+        "id": "8",
+        "nome": "Gustavo Silva",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "8": {
+        "id": "9",
+        "nome": "Isabela Martins",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "9": {
+        "id": "10",
+        "nome": "João Oliveira",
+        "opcoesChamada": {
+          "presente": false,
+          "ausente": false,
+          "justificado": false
+        }
+      },
+      "id": "77a2"
     }
   ]
 }

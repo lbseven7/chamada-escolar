@@ -69,7 +69,7 @@ function Report() {
               type="button"
               className="w-[100%] border bg-btn-color rounded h-[40px] text-font-color py-2 mb-24 p-3"
             >
-              VOLTAR PARA HOME
+              VOLTAR PARA CHAMADA
             </button>
           </Link>
         </div>

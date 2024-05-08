@@ -104,12 +104,6 @@ function Login() {
               required: 'O campo Senha é obrigatório',
               validate: (value) => {
                 const trimmedValue = value.trim(); // Remove espaços em branco extras
-                if (!trimmedValue) {
-                  return 'O campo Senha é obrigatório';
-                }
-                if (trimmedValue.includes(' ')) {
-                  return 'A senha não pode conter espaços em branco.';
-                }
                 if (trimmedValue.length < 6) {
                   return 'A senha deve conter no mínimo 6 caracteres.';
                 }

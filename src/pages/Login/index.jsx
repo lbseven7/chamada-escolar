@@ -102,7 +102,19 @@ function Login() {
             conditionalImage={imageState ? eye : eyeClosed}
             register={register('senha', {
               required: 'O campo Senha é obrigatório',
-              validate: (value) => !value.includes(' ') || 'A senha não pode conter espaços vazios.',
+              validate: (value) => {
+                const trimmedValue = value.trim(); // Remove espaços em branco extras
+                if (!trimmedValue) {
+                  return 'O campo Senha é obrigatório';
+                }
+                if (trimmedValue.includes(' ')) {
+                  return 'A senha não pode conter espaços em branco.';
+                }
+                if (trimmedValue.length < 6) {
+                  return 'A senha deve conter no mínimo 6 caracteres.';
+                }
+                return true;
+              },
             })}
           />
           {errors?.senha && <span className={errorStyle}>{errors?.senha?.message}</span>}

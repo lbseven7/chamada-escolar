@@ -58,7 +58,9 @@ function Call() {
     return ''; // Nenhuma opção selecionada
   };
 
-  const finalizasChamada = () => {
+  const finalizarChamada = () => {
+    localStorage.setItem('callData', JSON.stringify(alunos));
+
     fetch('http://localhost:3000/chamada', {
       method: 'POST',
       headers: {
@@ -125,7 +127,7 @@ function Call() {
 
             <Link to="/report">
               <button
-                onClick={() => finalizasChamada()}
+                onClick={() => finalizarChamada()}
                 type="button"
                 className="w-[100%] border bg-btn-color rounded h-[40px] text-font-color py-2 mb-24 p-3"
               >

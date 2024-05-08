@@ -72,7 +72,17 @@ function Report() {
               VOLTAR PARA CHAMADA
             </button>
           </Link>
+
+          <button
+            type="button"
+            className="w-[100%] border bg-btn-color rounded h-[40px] text-font-color py-2 mb-24 p-3"
+            onClick={() => window.print()}
+          >
+            BAIXAR RELATÓRIO
+          </button>
+
         </div>
+
       </div>
     </>
   );
